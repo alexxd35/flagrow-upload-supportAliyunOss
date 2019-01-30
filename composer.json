@@ -33,8 +33,8 @@
         "league/flysystem-aws-s3-v3": "^1.0",
         "techyah/flysystem-ovh": "^1.0",
         "flagrow/steamroller": "dev-master",
-		"aliyuncs/oss-sdk-php": "~2.2.1",
-		"aliyuncs/aliyun-oss-flysystem": "~1.2.0",
+	"aliyuncs/oss-sdk-php": "~2.2.1",
+	"aliyuncs/aliyun-oss-flysystem": "~1.2.0",
     },
     "extra": {
         "flarum-extension": {
