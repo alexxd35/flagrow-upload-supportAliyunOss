@@ -1,6 +1,7 @@
 最近弄一个flarum论坛，图片储存需要用到阿里云oss上传的拓展，看了一下“flagrow/upload”好像暂时没有阿里云，不过作者说稍后会添加。
 我暂时等不了那么久，所以自己在原插件基础上增加了阿里云oss的支持。
 ## 本插件在原插件基础上新增支持阿里云OSS
+本插件没有composer安装，所以请自己composer需要的依赖。
 使用前提你必须拥有以下拓展：
 - 阿里云oss sdk （不高于2.2的版本,我用的2.2.4）
   composer require aliyuncs/oss-sdk-php:v2.2.4
@@ -8,6 +9,7 @@
   composer require aliyuncs/aliyun-oss-flysystem
   
 然后下载本插件，覆盖去原插件那里(vendor/flagrow/upload)，本插件只增加了模块，没改动原来的东西，原理上是不会影响你原来的插件配置。
+（如果你之前没有用过flagrow/upload插件，请先自行composer安装一下原插件，因为会有安装别的依赖，然后再下载本插件去覆盖原插件即可）
   
 最后你可能还需要改下你的语言包才能在后台显示出对应的中文（不影响实际功能）。
 
