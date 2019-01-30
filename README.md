@@ -1,3 +1,20 @@
+最近弄一个flarum论坛，图片储存需要用到阿里云oss上传的拓展，看了一下“flagrow/upload”好像暂时没有阿里云，不过作者说稍后会添加。
+我暂时等不了那么久，所以自己在原插件基础上增加了阿里云oss的支持。
+## 本插件在原插件基础上新增支持阿里云OSS
+使用前提你必须拥有以下拓展：
+- 阿里云oss sdk （不高于2.2的版本,我用的2.2.4）
+  composer require aliyuncs/oss-sdk-php:v2.2.4
+- Flysystem的oss适配器 
+  composer require aliyuncs/aliyun-oss-flysystem
+  
+然后下载本插件，覆盖去原插件那里(vendor/flagrow/upload)，本插件只增加了模块，没改动原来的东西，原理上是不会影响你原来的插件配置。
+  
+最后你可能还需要改下你的语言包才能在后台显示出对应的中文（不影响实际功能）。
+
+可能还需要php flarum cache:clear一下
+
+我在beta8上亲测过可以使用，如果不能使用的，留下issue。
+
 # Upload by ![Flagrow logo](https://avatars0.githubusercontent.com/u/16413865?v=3&s=20) [Flagrow](https://discuss.flarum.org/d/1832-flagrow-extension-developer-group)
 
 [![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/flagrow/upload/blob/master/LICENSE.md) [![Latest Stable Version](https://img.shields.io/packagist/v/flagrow/upload.svg)](https://packagist.org/packages/flagrow/upload) [![Total Downloads](https://img.shields.io/packagist/dt/flagrow/upload.svg)](https://packagist.org/packages/flagrow/upload) [![Donate](https://discordapp.com/api/guilds/240489109041315840/embed.png)](https://flagrow.io/join-discord)
@@ -17,22 +34,6 @@ An extension that handles file uploads intelligently for your forum.
 - Easily extendable, the extension heavily relies on Events.
 
 For a complete overview of our releases, please visit the [milestones tracker](https://github.com/flagrow/upload/milestones) on Github.
-最近弄一个flarum论坛，图片储存需要用到阿里云oss上传的拓展，看了一下“flagrow/upload”好像暂时没有阿里云，不过作者说稍后会添加。
-我暂时等不了那么久，所以自己在原插件基础上增加了阿里云oss的支持。
-##本插件在原插件基础上新增支持阿里云OSS
-使用前提你必须拥有以下拓展：
-- 阿里云oss sdk （不高于2.2的版本,我用的2.2.4）
-  composer require aliyuncs/oss-sdk-php:v2.2.4
-- Flysystem的oss适配器 
-  composer require aliyuncs/aliyun-oss-flysystem
-  
-然后下载本插件，覆盖去原插件那里(vendor/flagrow/upload)，本插件只增加了模块，没改动原来的东西，原理上是不会影响你原来的插件配置。
-  
-最后你可能还需要改下你的语言包才能在后台显示出对应的中文（不影响实际功能）。
-
-可能还需要php flarum cache:clear一下
-
-我在beta8上亲测过可以使用，如果不能使用的，留下issue。
 
 ## Installation
 
