@@ -1,5 +1,7 @@
 【不再更新】
+
 【This item won't be updated anymore.】
+
 最近弄一个flarum论坛，图片储存需要用到阿里云oss上传的拓展，看了一下“flagrow/upload”好像暂时没有阿里云，不过作者说稍后会添加。
 我暂时等不了那么久，所以自己在原插件基础上增加了阿里云oss的支持。
 ## 本插件在原插件基础上新增支持阿里云OSS
